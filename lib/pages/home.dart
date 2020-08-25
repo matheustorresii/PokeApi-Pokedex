@@ -18,7 +18,11 @@ class _HomeState extends State<Home> {
       body: Container(
         child: ListView(
           children: [
-            PokemonCell()
+            PokemonCell(
+              id: 1,
+              name: 'bulbasaur',
+              types: ['grass', 'poison'],
+            ),
           ],
         ),
       ),
