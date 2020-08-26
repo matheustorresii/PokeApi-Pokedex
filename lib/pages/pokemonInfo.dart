@@ -22,7 +22,7 @@ class _PokemonInfoState extends State<PokemonInfo> {
   Color mainColor;
 
   void changeMainColor() {
-    Color newMainColor = verifyType(widget.types[0]);
+    Color newMainColor = verifyType(widget.types[0].name);
     setState(() {
       mainColor = newMainColor;
     });
@@ -106,10 +106,10 @@ class _PokemonInfoState extends State<PokemonInfo> {
                         width: 75,
                         height: 75,
                         child: Text(
-                          type.toString().toUpperCase()[0],
+                          type.name.toString().toUpperCase()[0],
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: verifyType(type),
+                            color: verifyType(type.name),
                             fontSize: 55.0,
                             fontWeight: FontWeight.bold,
                           ),

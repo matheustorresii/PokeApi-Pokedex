@@ -17,9 +17,21 @@ class PokemonData {
     return PokemonData(
       id: json['id'],
       name: json['name'],
-      types: json['types'],
+      types: (json['types'] as List).map((i) => Types.fromJson(i)).toList(),
       height: json['height'],
       weight: json['weight']
+    );
+  }
+}
+
+class Types {
+  final String name;
+
+  Types({this.name});
+
+  factory Types.fromJson(Map<String, dynamic> json){
+    return Types(
+      name: json['type']['name']
     );
   }
 }

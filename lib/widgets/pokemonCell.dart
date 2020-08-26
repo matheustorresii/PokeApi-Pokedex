@@ -63,7 +63,7 @@ class _PokemonCellState extends State<PokemonCell> {
             ),
             Row(
               children: widget.types.map((type) => 
-                PokemonCellType(type: type,)
+                PokemonCellType(type: type.name,)
               ).toList()
             ),
           ],
